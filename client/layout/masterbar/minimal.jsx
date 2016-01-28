@@ -14,7 +14,7 @@ import Item from './item';
 const MasterbarMinimal = ( { url } ) => (
 	<Masterbar>
 		<Item url={ url } icon="my-sites" className="masterbar__item-logo">
-			WordPress<span className="tld">.com</span>
+			Mozilla Foundation
 		</Item>
 	</Masterbar>
 );

@@ -147,7 +147,7 @@ function getDefaultContext( request ) {
 		badge: false,
 		lang: config( 'i18n_default_locale_slug' ),
 		jsFile: 'build',
-		faviconURL: '//s1.wp.com/i/favicon.ico',
+		faviconURL: 'https://www.mozilla.org/media/img/favicon.52506929be4c.ico',
 		isFluidWidth: !! config.isEnabled( 'fluid-width' ),
 		devDocsURL: '/devdocs'
 	};
@@ -183,7 +183,8 @@ function getDefaultContext( request ) {
 		context.badge = 'dev';
 		context.devDocs = true;
 		context.feedbackURL = 'https://github.com/Automattic/wp-calypso/issues/';
-		context.faviconURL = '/calypso/images/favicons/favicon-development.ico';
+		context.faviconURL = 'https://www.mozilla.org/media/img/favicon.52506929be4c.ico';
+		// context.faviconURL = '/calypso/images/favicons/favicon-development.ico';
 		context.branchName = getCurrentBranchName();
 		context.commitChecksum = getCurrentCommitShortChecksum();
 	}

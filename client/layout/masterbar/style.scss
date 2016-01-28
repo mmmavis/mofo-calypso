@@ -3,8 +3,7 @@ $autobar-height: 20px;
 
 // The WordPress.com Masterbar
 .masterbar {
-	background: $blue-wordpress;
-	border-bottom: 1px solid darken( $blue-wordpress, 4% );
+	background: $mozOrange;
 	color: $white;
 	font-size: 16px;
 	display: flex;
@@ -56,14 +55,14 @@ $autobar-height: 20px;
 
 	&:hover,
 	&:focus {
-		background: $blue-medium;
+		background: lighten( $mozOrange, 15% );
 		background: rgba( 255, 255, 255, 0.15 );
 		color: $white;
 		outline: 0;
 	}
 
 	&.is-active {
-		background: $blue-dark;
+		background: darken( $mozOrange, 20% );
 	}
 
 	.is-support-user &.is-active {
