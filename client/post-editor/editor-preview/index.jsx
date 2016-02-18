@@ -1,3 +1,5 @@
+const path = require('path');
+
 /**
  * External dependencies
  */
@@ -76,7 +78,16 @@ const EditorPreview = React.createClass( {
 		parsed.query.preview = 'true';
 		parsed.query.iframe = 'true';
 		delete parsed.search;
-		return url.format( parsed );
+
+		console.log("this.props.previewUrl = ",this.props.previewUrl);
+		console.log("parsed = ", parsed);
+		console.log("/////// url.format( parsed ) = ", url.format( parsed ));
+
+		var urlOnMavisReactSite = "http://localhost:9090/" + path.relative("https://mavismoztest.wordpress.com/", this.props.previewUrl);
+		console.log("url on mavis' site = ", urlOnMavisReactSite);
+
+		// return url.format( parsed );
+		return urlOnMavisReactSite;
 	},
 
 	render() {

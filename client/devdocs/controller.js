@@ -141,9 +141,9 @@ var devdocs = {
 			React.createElement( EmptyContent, {
 				title: 'Log In to start hacking',
 				line: 'Required to access the WordPress.com API',
-				action: 'Log In localhost:8888',
-				// actionURL: 'https://wordpress.com/wp-login.php?redirect_to=http%3A%2F%2Fcalypso.localhost%3A3000/devdocs/welcome',
-				actionURL: 'https://localhost:8888/wp-admin?redirect_to=http%3A%2F%2Fcalypso.localhost%3A3000/devdocs/welcome',
+				action: 'Log In WordPress',
+				actionURL: 'https://wordpress.com/wp-login.php?redirect_to=http%3A%2F%2Fcalypso.localhost%3A3000/devdocs/welcome',
+				// actionURL: 'http://localhost:8888/wp-admin?redirect_to=http%3A%2F%2Fcalypso.localhost%3A3000/devdocs/welcome',
 				// secondaryAction: 'Register',
 				// secondaryActionURL: '/start/developer',
 				illustration: '/calypso/images/mozilla/dapper-crop.svg'
