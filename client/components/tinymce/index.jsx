@@ -19,6 +19,7 @@ require( 'tinymce/plugins/media/plugin.js' );
 require( 'tinymce/plugins/paste/plugin.js' );
 require( 'tinymce/plugins/tabfocus/plugin.js' );
 require( 'tinymce/plugins/textcolor/plugin.js' );
+require( 'tinymce/plugins/template/plugin.js' );
 
 // TinyMCE plugins copied from .org
 require( './plugins/wptextpattern/plugin.js' );
@@ -101,6 +102,7 @@ const PLUGINS = [
 	'paste',
 	'tabfocus',
 	'textcolor',
+	'template',
 	'wptextpattern',
 	'wpcom',
 	'wpeditimage',
@@ -205,7 +207,7 @@ module.exports = React.createClass( {
 
 		this.localize();
 
-		let toolbar1 = [ 'wpcom_add_media', 'formatselect', 'bold', 'italic', 'bullist', 'numlist', 'link', 'blockquote', 'alignleft', 'aligncenter', 'alignright', 'spellchecker', 'wp_more', 'wpcom_advanced' ];
+		let toolbar1 = [ 'template', 'toolbar1', 'wpcom_add_media', 'formatselect', 'bold', 'italic', 'bullist', 'numlist', 'link', 'blockquote', 'alignleft', 'aligncenter', 'alignright', 'spellchecker', 'wp_more', 'wpcom_advanced' ];
 		if ( config.isEnabled( 'post-editor/contact-form' ) ) {
 			toolbar1.splice( 1, 0, 'wpcom_add_contact_form' );
 		}
@@ -263,7 +265,7 @@ module.exports = React.createClass( {
 			redux_store: this.context.store,
 
 			// Limit the preview styles in the menu/toolbar
-			preview_styles: 'font-family font-size font-weight font-style text-decoration text-transform',
+			preview_styles: 'color background-color font-family font-size font-weight font-style text-decoration text-transform',
 			end_container_on_empty_block: true,
 			plugins: PLUGINS.join(),
 			statusbar: false,
@@ -286,7 +288,11 @@ module.exports = React.createClass( {
 			body_class: 'content post-type-post post-status-draft post-format-standard locale-en-us',
 			add_unload_trigger: false,
 
-			setup: setup
+			setup: setup,
+
+			templates: [
+		    {title: 'Template #1', description: '<h1> followed by <h2>', content: '<h1>Main Header</h1><h2>Secondary Header</h2>'}
+		  ]
 
 		} );
 
